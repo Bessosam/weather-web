@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #222 url('images/weather.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Card Container */
+.card {
+    width: 80%;
+    max-width: 600px;
+    background: rgba(19, 116, 206, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px yellow;
+    text-align: center;
+    margin-top: 70px;
+    
+    
+}
+
+.card:hover {
+    box-shadow: 0 6px 20px rgb(29, 185, 21);
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+.search input {
+    padding: 10px 15px;
+    border-radius: 30px 0 0 30px;
+    border: none;
+    outline: none;
+    width: 70%;
+    transition: 0.3s;
+}
+
+.search button {
+    background: #ebfffc;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search button img {
+    width: 16px;
+}
+
+/* Weather Information */
+.weather {
+    margin: 20px 50px;
+}
+
+.weather-icon {
+    width: 100px;
+    margin: 20px auto;
+    display: block;
+}
+
+.weather h1 {
+    font-size: 3rem;
+}
+
+.weather h2 {
+    font-size: 1.5rem;
+    margin-top: -10px;
+}
+
+/* Details Section */
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.details .col {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.details .col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.details .col p {
+    margin: 0;
+}
+
+.humidity, .wind {
+    font-size: 1rem;
+}
+
+/* Forecast Container */
+.forecast-item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.forecast-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid yellow;
+    box-shadow: 0 4px 15px rgb(215, 212, 15);
+    transition: background 0.3s;
+}
+
+.forecast-item:hover {
+    background: rgba(34, 189, 42, 0.2);
+}
+
+.forecast-item h5 {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.forecast-item img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Favorites Section */
+#favoritesContainer {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#favoritesList {
+    list-style: none;
+    padding: 0;
+}
+
+#favoritesList li {
+    padding: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#favoritesList li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Links */
+.details-link, .back-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 20px;
+    background: #1374ce;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.details-link:hover, .back-link:hover {
+    background: #5b538a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        padding: 20px;
+        width: 95%;
+    }
+
+    
+   
+
+    .weather h1 {
+        font-size: 2.5rem;
+    }
+
+    .weather h2 {
+        font-size: 1.5rem;
+    }
+}
+.description {
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 20px;
+    background: rgba(12, 12, 217, 0.814); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    color: #fff; 
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    
+}
+
+.description p {
+    margin: 0; 
+}
+/* Description Section in details.html */
+.description {
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.card-details{
+    background: rgba(19, 116, 206, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px yellow;
+    text-align: center;
+    margin-right: 30px;
+}
+/* Favorites Section */
+#favoritesContainer {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#favoritesContainer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#favoritesList {
+    list-style: none;
+    padding: 0;
+}
+
+#favoritesList li {
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#favoritesList li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
