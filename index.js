@@ -118,7 +118,10 @@ function updateFavorites() {
     favorites.forEach((city) => {
         const li = document.createElement('li');
         li.textContent = city;
-
+        li.addEventListener('click',()=>{
+            fetchWeather(city);
+            
+        });
         const deleteIcon = document.createElement('img');
         deleteIcon.src = "images/trash.png"; 
         deleteIcon.alt = "Delete";
